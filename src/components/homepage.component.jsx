@@ -74,6 +74,7 @@ const Homepage = () => {
   
 
   return (
+    
       <div className="gradient-bg">
       <div className='cursor-dot' data-cursor-dot></div>
       <div className='cursor-outline' data-cursor-outline></div>

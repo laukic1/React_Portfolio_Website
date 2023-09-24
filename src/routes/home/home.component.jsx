@@ -12,6 +12,7 @@ const Home = () => {
         <Route element={<Contact />} path="contact" />
         <Route element={<Projects />} path="projects" />
         </Route>
+        
     </Routes>
   );
 };
