@@ -34,7 +34,7 @@ const CircularMenu = ({ pages }) => {
     
     <div className={`circular-menu ${isMovedToBottom ? 'move-menu-bottom' : "" }`}>
     
-      <div className="menu-button" onClick={handleSetIsOpen}>{isOpen ? <XIcon className='x-icon display-icon' /> : <DotsIcon className={`dots display-icon ${isOpen ? 'open' : ''}`} /> }</div>
+      <div className="menu-button" onClick={handleSetIsOpen}>{isOpen ? <XIcon className='x-icon display-icon' /> : <DotsIcon className={`dots display-icon ${isOpen ? 'open' : ''}`} />  }</div>
         {pages.map((item, index) => (
           <MenuItem
             className={`${isMovedToBottom ? 'move-menu-bottom' : "" }`}
