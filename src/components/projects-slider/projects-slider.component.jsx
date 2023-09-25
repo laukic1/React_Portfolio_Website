@@ -1,17 +1,25 @@
 import "./projects-slider.styles.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { projects } from "../../data";
-import { EffectCreative, Navigation, Pagination, Scrollbar, A11y, EffectCube } from 'swiper/modules';
+import { Navigation, Pagination, EffectFlip } from "swiper/modules";
+import { useState } from "react";
+import { ReactComponent as GitIcon } from "../../assets/git-hub-icon.svg";
 
 // Import Swiper styles
 
-
-import 'swiper/css/pagination';
-
-import 'swiper/css';
-import 'swiper/css/effect-creative';
+import "swiper/css";
+import "swiper/css/effect-flip";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const ProjectsSlider = () => {
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const [selectedProjectTitle, setSelectedProjectTitle] = useState(projects[0].title);
+  const [selectedProjectText, setSelectedProjectText] = useState(projects[0].text);
+
+   
+
+
   return (
     <div className="contact-container">
       <h2>PROJECTS</h2>
@@ -20,36 +28,50 @@ const ProjectsSlider = () => {
         <div className="about-container5">
           <div className="row5">
             <Swiper
-                grabCursor={true}
-        effect={'creative'}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            translate: [0, 0, -400],
-          },
-          next: {
-            translate: ['100%', 0, 0],
-          },
-        }}
-        modules={[EffectCreative, Pagination]}
-        className="mySwiper"
-        
-     
+              effect={"flip"}
+              grabCursor={true}
+              pagination={true}
+              navigation={true}
+              modules={[EffectFlip, Pagination, Navigation]}
+              className="swiper"
+              onSlideChange = {(swiper) => {
+    const newIndex = swiper.activeIndex;
+    setSelectedProjectIndex(newIndex);
+    const selectedProject = projects[newIndex];
+    setSelectedProjectTitle(selectedProject.title);
+    setSelectedProjectText(selectedProject.text);
+}}
             >
               {projects.map((item) => {
                 return (
-                  <SwiperSlide key={item.id}>
-                    <div>
-                      <img src={item.image} alt={item.title} />
-                      
-                       
-                    </div>
-                  </SwiperSlide>
+                  <>
+                    <SwiperSlide className="swiper-slide" key={item.id}>
+                      <div className="slider-img-container">
+                        <img src={item.image} alt={item.title} />
+                      </div>
+                    </SwiperSlide>
+                  </>
                 );
               })}
             </Swiper>
           </div>
         </div>
+        <div className="about-container2">
+          {selectedProjectTitle && (
+            <div className="row-projects">
+              <h3 className='project-title'>{selectedProjectTitle}</h3>
+              <p className='project-text'>{selectedProjectText}</p>
+              
+            </div>
+            
+          )}
+          <div className='row-projects-icons'>
+          <GitIcon className='git-icon' />
+          <GitIcon className='git-icon' />
+          </div>
+        </div>
+       
+        
       </div>
     </div>
   );

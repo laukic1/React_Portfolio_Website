@@ -81,8 +81,8 @@
     .about-container2 {
         display: flex;
         justify-content: flex-start;
-        align-items: center;
-        flex-direction: row;
+        align-items: flex-start;
+        
         font-size: 20px;
         width: 500px;
 
@@ -90,9 +90,14 @@
         .row1 {
             display: flex;
             justify-content: flex-start;
-            gap: 2em;
+            
             align-items: center;
-            width: 50%;
+            width: 100%;
+            min-height: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 1em;
+            border: 1px solid rgb(186, 186, 186);
+            border-radius: 10px;
             
 
             .info-icon {
@@ -123,7 +128,7 @@
             justify-content: flex-start;
             gap: 2em;
             align-items: center;
-            width: 50%;
+            width: 100%;
 
             .profile-img {
                 width: 200px;

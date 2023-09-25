@@ -35,7 +35,7 @@ const About = () => {
         </div>
 
         <div className="about-container2">
-          <div className="row1">
+          <div className="row-about">
             
             <InfoIcon className="info-icon" />
             

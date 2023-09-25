@@ -13,10 +13,7 @@ const menuButtons = [
   { icon: ProjectsIcon, color: "#ffffff", route:"projects" },
   { icon: ContactIcon, color: "#ffffff", route:"contact" },
   { icon: AboutIcon, color: "#ffffff", route:"about" },
-  { icon: HomeIcon, color: "#ffffff" },
-  { icon: ProjectsIcon, color: "#ffffff" },
-  { icon: ContactIcon, color: "#ffffff" },
-  { icon: AboutIcon, color: "#ffffff" },
+
 ];
 
 const Homepage = () => {

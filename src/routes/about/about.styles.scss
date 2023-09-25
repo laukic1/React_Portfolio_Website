@@ -20,7 +20,7 @@
         flex-direction: column;
         font-size: 20px;
         width: 500px;
-        gap: 1em;
+        
         
 
         .row1 {
@@ -88,12 +88,12 @@
         width: 500px;
 
 
-        .row1 {
+        .row-about {
             display: flex;
             justify-content: flex-start;
             gap: 2em;
             align-items: center;
-            width: 50%;
+            width: 100%;
             
 
             .info-icon {
