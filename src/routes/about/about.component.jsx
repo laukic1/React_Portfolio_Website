@@ -2,8 +2,15 @@ import "./about.styles.scss";
 import { ReactComponent as InfoIcon } from "../../assets/info-icon.svg";
 import ProfileImage from '../../assets/profile.png';
 
-
 const About = () => {
+  const pdfUrl = 'https://www.dropbox.com/scl/fi/vlcdlxt5dgfg1v3vpddda/resume.pdf?rlkey=raze4oe37rfslkhom3o171m13&dl=0';
+  
+  const togglePDFViewer = () => {
+    
+    
+      window.open(pdfUrl, '_blank');
+  }
+
   return (
     <div className="contact-container">
       <h2>ABOUT ME</h2>
@@ -30,8 +37,13 @@ const About = () => {
 
           </div>
 
-
-          <button className='send-email-btn'>View resume</button>
+      
+        
+          <button onClick={togglePDFViewer} className='send-email-btn'>View resume</button>
+        
+      
+        
+       
         </div>
 
         <div className="about-container2">

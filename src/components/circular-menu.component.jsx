@@ -1,5 +1,5 @@
 import MenuItem from "./menu-item.component";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ReactComponent as DotsIcon } from '../assets/dots-icon.svg';
 import { ReactComponent as XIcon } from '../assets/x-icon.svg';
 
@@ -8,13 +8,38 @@ const CircularMenu = ({ pages }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMovedToBottom, setIsMovedToBottom] = useState(false);
 
+  useEffect(() => {
+    const storedIsMovedToBottom = localStorage.getItem("isMovedToBottom");
+    if (storedIsMovedToBottom === "true") {
+      setIsMovedToBottom(true);
+    }
+  
+
+  }, [])
+
   const handleSetIsOpen = () => {
     if(isMovedToBottom) {
       setIsMovedToBottom(false)
       setIsOpen(prevBool => !prevBool)
+      const contentToBlur = document.querySelector(".route-content");
+      if (contentToBlur) {
+      if(!isOpen) {
+        contentToBlur.classList.add('blur-background');
+      } else {
+        contentToBlur.classList.remove('blur-background');
+         
+      }
+    }
     } else {
-    setIsOpen(prevBool => !prevBool);
+    setIsOpen(true);
+      setIsMovedToBottom(false);
+      const contentToBlur = document.querySelector(".route-content");
+    if (contentToBlur) {
+      contentToBlur.classList.add("blur-background");
+    }
+    
   };
+  localStorage.setItem("isMovedToBottom", isMovedToBottom ? "true" : "false");
 }
 
 
@@ -23,9 +48,18 @@ const CircularMenu = ({ pages }) => {
     setIsOpen(false);
 
     setIsMovedToBottom(true)
-
+    const contentToBlur = document.querySelector(".route-content");
+    contentToBlur.classList.remove('blur-background');
     
   };
+
+  // useEffect(() => {
+
+  //   return () => {
+  //     window.removeEventListener("mousemove", handleMouseMove);
+  //     document.body.classList.remove('blur-background');
+  //   }
+  // }, []);
 
   
 

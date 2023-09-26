@@ -4,6 +4,9 @@ import { ReactComponent as EmailIcon } from "../../assets/email-icon.svg";
 
 import { ReactComponent as LinkedInIcon } from "../../assets/linkedIn-icon.svg";
 import { ReactComponent as GitHubIcon } from "../../assets/git-hub-icon.svg";
+import SendEmailButton from "../../components/email-send-button/email-send-button.component";
+import PhoneCall from "../../components/phone-call/phone-call.component";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -14,7 +17,7 @@ const Contact = () => {
         <div className="contact-container1">
           <div className="row1">
             <div className="phone-container">
-              <PhoneIcon className="phone-icon" />
+              <PhoneIcon onClick={PhoneCall} className="phone-icon" />
             </div>
             <p>+386 40 323 077</p>
           </div>
@@ -22,21 +25,21 @@ const Contact = () => {
 
           <div className="row1">
             <div className="email-container">
-              <EmailIcon className="email-icon" />
+              <EmailIcon onClick={SendEmailButton} className="email-icon" />
             </div>
 
             <p>dlauko96@gmail.com</p>
           </div>
 
+          
 
-          <button className='send-email-btn'>Send email</button>
         </div>
 
         <div className="contact-container2">
           <div className="row1">
             
-            <LinkedInIcon className="linked-icon" />
-            <GitHubIcon className="git-icon" />
+           <Link target="_blank" to='https://www.linkedin.com/in/david-lauko-602649269/'><LinkedInIcon className="linked-icon" /></Link> 
+            <Link target="_blank" to='https://github.com/laukic1'><GitHubIcon className="git-icon" /></Link>
           </div>
         </div>
       </div>

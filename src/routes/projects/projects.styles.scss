@@ -52,7 +52,7 @@
     }
 
     .phone-container {
-        width: 120px;
+        width: 100px;
 
         .phone-icon {
             display: flex;
@@ -60,12 +60,11 @@
             align-items: center;
             width: 100%;
             height: 100%;
-            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         }
     }
 
     .email-container {
-        width: 120px;
+        width: 100px;
 
         .email-icon {
             display: flex;
@@ -73,7 +72,6 @@
             align-items: center;
             width: 100%;
             height: 100%;
-            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         }
     }
 
@@ -93,7 +91,7 @@
             
             align-items: flex-start;
             width: 300px;
-            height: 250px;
+            height: 300px;
             padding: 1em;
             background-color: rgba(255, 255, 255, 0.2);
             
@@ -117,18 +115,35 @@
         .row-projects-icons {
             display: flex;
             flex-direction: column;
-            
-            width: auto;
-            height: 250px;
+            justify-content: space-between;
+            width: 300px;
+            height: auto;
             padding: 1em;
+            gap: 1em;
            
             
             .git-icon {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 50%;
-                height: 50%;
+                width: 30%;
+                height: 30%;
+                transition: transform 0.3s ease-in-out;
+                
+      
+                &:hover {
+                  transform: translateY(-10%);
+              border-bottom: 2px inset rgba(240,240,240,0.5);
+                }
+            
+            }
+
+            .web-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30%;
+                height: 30%;
                 transition: transform 0.3s ease-in-out;
                 
       
