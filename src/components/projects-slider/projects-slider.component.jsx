@@ -52,11 +52,11 @@ const ProjectsSlider = () => {
                 setSelectedProjectWebsite(selectedProject.website);
               }}
             >
-              {projects.map((item) => {
+              {projects.map((item, index) => {
                 return (
                   <>
-                    <SwiperSlide className="swiper-slide" key={item.id}>
-                      <div className="slider-img-container">
+                    <SwiperSlide key={index} className="swiper-slide">
+                      <div  className="slider-img-container">
                         <img src={item.image} alt={item.title} />
                       </div>
                     </SwiperSlide>
@@ -66,7 +66,7 @@ const ProjectsSlider = () => {
             </Swiper>
           </div>
         </div>
-        <div className="about-container2">
+        <div className="projects-container">
           {selectedProjectTitle && (
             <div className="row-projects">
               <h3 className="project-title">{selectedProjectTitle}</h3>
@@ -76,11 +76,11 @@ const ProjectsSlider = () => {
 
           {selectedProjectTitle && (
             <div className="row-projects-icons">
-             <Link target="_blank" to={selectedProjectWebsite}><WebsiteIcon className="web-icon" /></Link> 
+             <Link key={`${selectedProjectTitle}-web`} target="_blank" to={selectedProjectWebsite}><WebsiteIcon className="web-icon" /></Link> 
              
               {
                 selectedProjectGitHub && (
-                  <Link target="_blank" to={selectedProjectGitHub}><GitIcon className="git-icon" /></Link>
+                  <Link key={`${selectedProjectTitle}-git`} target="_blank" to={selectedProjectGitHub}><GitIcon className="git-icon" /></Link>
                 )
               }
               

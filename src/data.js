@@ -25,7 +25,7 @@ import ProjectImage3 from './assets/project3.jpg';
     id: 3,
     title: 'ASPECTA',
     image: ProjectImage3,
-    text: `This website, created with WordPress and Divi, showcases an amalgamation of captivating visuals and intuitive user interactions. The integration of custom CSS and Javascript elevates the aesthetic appeal and user experience, presenting a seamless blend of artistry and functionality.`,
+    text: `This website, created with WordPress and Divi, showcases an amalgamation of captivating visuals and intuitive user interactions. The integration of custom CSS and Javascript elevates the aesthetic appeal and user experience.`,
     website: 'https://aspecta.si/',
 },
 
