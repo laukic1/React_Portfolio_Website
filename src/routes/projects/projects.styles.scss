@@ -173,16 +173,24 @@
             width: 100%;
 
             .swiper {
-               
+               cursor: none;
                 width: 500px;
                 height: 250px;
                 padding: 50px;
+
+                &:hover {
+                    cursor: none;
+                }
 
                 .swiper-slide {
                     background-position: center;
                     background-size: cover;
                     width: 300px;
                     height: 230px;
+
+                    &:hover {
+                        cursor: none;
+                    }
                   }
                   
                   .swiper-slide img {

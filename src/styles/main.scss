@@ -6,10 +6,20 @@ html, body {
     padding: 0;
    cursor: none;
     
+   &:hover {
+    cursor: none;
+   }
   }
 
   * {
     font-weight: 400;
+  }
+
+  *:hover {
+    cursor: none;
+  }
+  *:focus {
+    cursor: none;
   }
 
 
@@ -31,6 +41,7 @@ html, body {
     height: 30px;
     border: 2px solid hsla(0%, 0%, 100%, 0.1);
     box-shadow: 0 0 20px rgb(0, 0, 0);
+    
   }
 
   .cursor-dot,
@@ -42,7 +53,7 @@ html, body {
     border-radius: 50%;
     z-index: 200;
     pointer-events: none;
-
+    cursor: none;
   }
   
 

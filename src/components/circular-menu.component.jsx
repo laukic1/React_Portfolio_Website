@@ -1,56 +1,79 @@
 import MenuItem from "./menu-item.component";
-import { useState, useEffect } from "react";
-import { ReactComponent as DotsIcon } from '../assets/dots-icon.svg';
-import { ReactComponent as XIcon } from '../assets/x-icon.svg';
-
+import { useState, useEffect, useRef } from "react";
+import { ReactComponent as DotsIcon } from "../assets/dots-icon.svg";
+import { ReactComponent as XIcon } from "../assets/x-icon.svg";
 
 const CircularMenu = ({ pages }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMovedToBottom, setIsMovedToBottom] = useState(false);
+  const menuRef = useRef(null);
 
   useEffect(() => {
-    const storedIsMovedToBottom = localStorage.getItem("isMovedToBottom");
-    if (storedIsMovedToBottom === "true") {
-      setIsMovedToBottom(true);
+    setIsMovedToBottom(true);
+  }, []);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        // Clicked outside the menu
+        setIsOpen(false);
+        setIsMovedToBottom(true);
+        const contentToBlur = document.querySelector(".route-content");
+        if (contentToBlur) {
+          contentToBlur.classList.remove("blur-background");
+        }
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("click", handleOutsideClick);
     }
-  
 
-  }, [])
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, [isOpen]);
 
-  const handleSetIsOpen = () => {
-    if(isMovedToBottom) {
-      setIsMovedToBottom(false)
-      setIsOpen(prevBool => !prevBool)
+  const handleSetIsOpen = (event) => {
+    if (isMovedToBottom) {
+      setIsMovedToBottom(false);
+      setIsOpen((prevBool) => !prevBool);
+
       const contentToBlur = document.querySelector(".route-content");
       if (contentToBlur) {
-      if(!isOpen) {
-        contentToBlur.classList.add('blur-background');
+        if (!isOpen) {
+          contentToBlur.classList.add("blur-background");
+        } else {
+          contentToBlur.classList.remove("blur-background");
+        }
+      }
+      event.stopPropagation();
+    } else {
+      if (isOpen) {
+        setIsOpen(false);
+        setIsMovedToBottom(true);
+        const contentToBlur = document.querySelector(".route-content");
+        if (contentToBlur) {
+          contentToBlur.classList.remove("blur-background");
+        }
       } else {
-        contentToBlur.classList.remove('blur-background');
-         
+        setIsOpen(true);
+        setIsMovedToBottom(false);
+        const contentToBlur = document.querySelector(".route-content");
+        if (contentToBlur) {
+          contentToBlur.classList.add("blur-background");
+        }
       }
     }
-    } else {
-    setIsOpen(true);
-      setIsMovedToBottom(false);
-      const contentToBlur = document.querySelector(".route-content");
-    if (contentToBlur) {
-      contentToBlur.classList.add("blur-background");
-    }
-    
+    localStorage.setItem("isMovedToBottom", isMovedToBottom ? "true" : "false");
   };
-  localStorage.setItem("isMovedToBottom", isMovedToBottom ? "true" : "false");
-}
-
-
 
   const handleCloseMenu = () => {
     setIsOpen(false);
 
-    setIsMovedToBottom(true)
+    setIsMovedToBottom(true);
     const contentToBlur = document.querySelector(".route-content");
-    contentToBlur.classList.remove('blur-background');
-    
+    contentToBlur.classList.remove("blur-background");
   };
 
   // useEffect(() => {
@@ -61,18 +84,22 @@ const CircularMenu = ({ pages }) => {
   //   }
   // }, []);
 
-  
-
   return (
     <>
-    
-    <div className={`circular-menu ${isMovedToBottom ? 'move-menu-bottom' : "" }`}>
-    
-      <div className="menu-button" onClick={handleSetIsOpen}>{isOpen ? <XIcon className='x-icon display-icon' /> : <DotsIcon className={`dots display-icon ${isOpen ? 'open' : ''}`} />  }</div>
+      <div
+        ref={menuRef}
+        className={`circular-menu ${isMovedToBottom ? "move-menu-bottom" : ""}`}
+      >
+        <div className="menu-button" onClick={handleSetIsOpen}>
+          {isOpen ? (
+            <XIcon className="x-icon display-icon" />
+          ) : (
+            <DotsIcon className={`dots display-icon ${isOpen ? "open" : ""}`} />
+          )}
+        </div>
         {pages.map((item, index) => (
           <MenuItem
-            className={`${isMovedToBottom ? 'move-menu-bottom' : "" }`}
-            
+            className={`${isMovedToBottom ? "move-menu-bottom" : ""}`}
             key={index}
             item={item}
             rotation={(360 / pages.length) * index}
@@ -81,9 +108,7 @@ const CircularMenu = ({ pages }) => {
             onClick={handleCloseMenu}
           />
         ))}
-        
-    </div>
-    
+      </div>
     </>
   );
 };

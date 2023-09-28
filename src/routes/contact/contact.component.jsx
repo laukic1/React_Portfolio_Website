@@ -8,6 +8,8 @@ import SendEmailButton from "../../components/email-send-button/email-send-butto
 import PhoneCall from "../../components/phone-call/phone-call.component";
 import { Link } from "react-router-dom";
 
+import Lottie from "lottie-react";
+import animationData from '../../assets/animation_ln3cfm62.json';
 const Contact = () => {
   return (
     <div className="contact-container">
@@ -20,6 +22,7 @@ const Contact = () => {
               <PhoneIcon onClick={PhoneCall} className="phone-icon" />
             </div>
             <p>+386 40 323 077</p>
+            <Lottie animationData={animationData} />
           </div>
 
 

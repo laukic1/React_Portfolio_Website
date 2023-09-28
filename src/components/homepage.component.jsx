@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import { Outlet } from "react-router";
 
 
+
+
 const menuButtons = [
   { icon: HomeIcon, color: "rgba(255,255,255)", route:"/" },
   { icon: ProjectsIcon, color: "#ffffff", route:"projects" },
@@ -72,7 +74,7 @@ const Homepage = () => {
   return (
     
       <div className="gradient-bg">
-    
+
       <div className='cursor-dot' data-cursor-dot></div>
       <div className='cursor-outline' data-cursor-outline></div>
       <div className='clash-container'>

@@ -38,7 +38,6 @@ const ProjectsSlider = () => {
           <div className="row5">
             <Swiper
               effect={"flip"}
-              grabCursor={true}
               pagination={true}
               navigation={true}
               modules={[EffectFlip, Pagination, Navigation]}

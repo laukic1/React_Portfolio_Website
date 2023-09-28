@@ -2,6 +2,7 @@ import "./about.styles.scss";
 import { ReactComponent as InfoIcon } from "../../assets/info-icon.svg";
 import ProfileImage from '../../assets/profile.png';
 
+
 const About = () => {
   const pdfUrl = 'https://www.dropbox.com/scl/fi/vlcdlxt5dgfg1v3vpddda/resume.pdf?rlkey=raze4oe37rfslkhom3o171m13&dl=0';
   
@@ -23,6 +24,7 @@ const About = () => {
         </div>
       </div>
         <div className="about-container1">
+        
           <div className="row1">
            
             <p>Hey, my name is David Lauko and I'm a passionate front-end developer from Maribor, Slovenia.</p>
