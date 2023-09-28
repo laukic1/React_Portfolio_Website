@@ -7,13 +7,13 @@ const TypewriterEffect = () => {
         <span style={{ color: 'black', fontWeight: 'bold',}}>
           {/* Style will be inherited from the parent element */}
           <Typewriter
-            words={['turning dreams into code.', 'a good listener and lifelong learner.', 'passionate for programming.', 'providing smart solutions.']}
+            words={['building innovative and user-friendly applications.', 'providing smart solutions.', 'Always eager to learn new technologies.', 'Passionate about coding and problem-solving.']}
             loop={5}
             cursor
             cursorStyle='_'
             typeSpeed={50}
-            deleteSpeed={50}
-            delaySpeed={1000}
+            deleteSpeed={70}
+            delaySpeed={3000}
          
           />
         </span>
