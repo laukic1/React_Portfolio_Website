@@ -290,6 +290,9 @@ align-items: center;
 
 
 @media (max-width: 1024px) {
+  body{
+    cursor: pointer;
+  }
   .cursor-dot {
     display: none;
 
