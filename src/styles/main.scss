@@ -289,4 +289,19 @@ align-items: center;
   }
 
 
+@media (max-width: 1024px) {
+  .cursor-dot {
+    display: none;
 
+  }
+
+  .cursor-outline {
+    display: none;
+    
+  }
+
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+  }
+}
