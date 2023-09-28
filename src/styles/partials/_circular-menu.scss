@@ -9,9 +9,6 @@
     
     transform: translateY(0); /* Move to the visible position */
     
-    
-    
-     
 }
 
 .move-menu-bottom {
@@ -113,3 +110,181 @@
 
 }
 
+@media (max-width: 380px) {
+    .circular-menu {
+        height: 60px;
+        position:relative;
+        width: 60px;
+        opacity: 1; /* Fade in */
+        transition: transform 0.5s ease-in-out;
+        transform: translateY(0); /* Move to the visible position */
+        margin: 0.5em;
+    }
+    
+    .move-menu-bottom {
+        width: 60px;
+        height: 60px;
+        transform: translateY(350%);
+      }
+    
+    .menu-button,
+    .menu-item {
+        left: 0;
+        position: absolute;
+        top: 0;
+        cursor: none;  
+    }
+
+    .menu-button {
+
+   
+        background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0 0 20px rgb(255, 255, 255);
+        transition: transform 300ms ease-in-out;
+        animation: shadow-beep 6s infinite ease-in-out;
+        
+        &::after {
+            position: fixed;
+        }
+    
+        &:hover {
+            transform: scale(1.1);
+            
+             
+        }
+    
+        .x-icon {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.45em;
+            
+            
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+}
+
+@media (min-width: 390px) and (max-width: 768px) {
+    .circular-menu {
+        height: 80px;
+        position:relative;
+        width: 80px;
+        opacity: 1; /* Fade in */
+        transition: transform 0.5s ease-in-out;
+        transform: translateY(0); /* Move to the visible position */
+    
+    }
+    
+    .move-menu-bottom {
+        width: 80px;
+        height: 80px;
+        transform: translateY(350%);
+      }
+    
+    .menu-button,
+    .menu-item {
+        left: 0;
+        position: absolute;
+        top: 0;
+        cursor: none;  
+    }
+
+    
+    .menu-button {
+
+   
+        background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0 0 20px rgb(255, 255, 255);
+        transition: transform 300ms ease-in-out;
+        animation: shadow-beep 6s infinite ease-in-out;
+        
+        &::after {
+            position: fixed;
+        }
+    
+        &:hover {
+            transform: scale(1.1);
+            
+             
+        }
+    
+        .x-icon {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.9em;
+            
+            
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .circular-menu {
+        height: 80px;
+        position:relative;
+        width: 80px;
+        opacity: 1; /* Fade in */
+        transition: transform 0.5s ease-in-out;
+        transform: translateY(0); /* Move to the visible position */
+    
+    }
+    
+    .move-menu-bottom {
+        width: 80px;
+        height: 80px;
+        transform: translateY(300%);
+      }
+    
+    .menu-button,
+    .menu-item {
+        left: 0;
+        position: absolute;
+        top: 0;
+        cursor: none;  
+    }
+
+    
+    .menu-button {
+
+   
+        background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0 0 20px rgb(255, 255, 255);
+        transition: transform 300ms ease-in-out;
+        animation: shadow-beep 6s infinite ease-in-out;
+        
+        &::after {
+            position: fixed;
+        }
+    
+        &:hover {
+            transform: scale(1.1);
+            
+             
+        }
+    
+        .x-icon {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.9em;
+            
+            
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+}

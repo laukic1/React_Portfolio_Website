@@ -30,7 +30,7 @@
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(0, 0, 0, 0.1);
             padding: 1em;
             border: 1px solid rgb(186, 186, 186);
             border-radius: 10px;
@@ -164,4 +164,170 @@
     border-bottom: 5px solid white;
     text-shadow: 0 0 3px black;
   }
+
+  @media (max-width: 768px) {
+
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      transition: 1s ease-in-out;
+      gap: 5em;
+      width: 100%;
+
+      h2 {
+        
+        font-weight: 700;
+        font-size: 32px;
+        transform: translateY(90%);
+        border-bottom: 5px solid white;
+        text-shadow: 0 0 3px black;
+      }
+
+      .content-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2em;
+        
+      }
+    
+      .contact-container1 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 26px;
+        width: 80%;
+        
   
+        
+        
+    
+        .row1 {
+          display: flex;
+          
+          font-size: 20px;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.1);
+              
+              border: 1px solid rgb(186, 186, 186);
+              border-radius: 10px;
+    
+          .phone-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            height: 25%;
+          }
+    
+          .email-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            height: 30%;
+          }
+        }
+      }
+    
+      .phone-container {
+        width: 100%;
+       
+    
+        .phone-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.3s ease-in-out;
+          
+          &:hover {
+              
+            transform: translateY(-10%);
+            border-bottom: 2px inset rgba(240,240,240,0.5);
+              }
+        }
+      }
+    
+      .email-container {
+        width: 100%;
+    
+        .email-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.3s ease-in-out;
+          
+          &:hover {
+              
+            transform: translateY(-10%);
+            border-bottom: 2px inset rgba(240,240,240,0.5);
+              }
+        }
+      }
+    
+      .contact-container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-color: rgba(0, 0, 0, 0.1);
+        font-size: 22px;
+        width: 60%;
+        border-radius: 10px;
+        padding: 1em;
+    
+        .row1 {
+          display: flex;
+          justify-content: center;
+          gap: 2em;
+          align-items: center;
+          width: 50%;
+    
+          .linked-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+            
+  
+            &:hover {
+              transform: translateY(-10%);
+          border-bottom: 2px inset rgba(240,240,240,0.5);
+            }
+          }
+    
+          .git-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+          
+  
+            &:hover {
+              
+          transform: translateY(-10%);
+          border-bottom: 2px inset rgba(240,240,240,0.5);
+            }
+          }
+        }
+      }
+
+     
+  }
+}
