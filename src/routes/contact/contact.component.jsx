@@ -13,15 +13,15 @@ const Contact = () => {
     <div className="contact-container">
       <h2>CONTACT</h2>
       <div className="content-body">
-        <div className="contact-container1">
-          <div className="row1">
+        <div className="info-container">
+          <div className="row">
             <div className="phone-container">
               <PhoneIcon onClick={PhoneCall} className="phone-icon" />
             </div>
             <p>+386 40 323 077</p>
           </div>
 
-          <div className="row1">
+          <div className="row">
             <div className="email-container">
               <EmailIcon onClick={SendEmailButton} className="email-icon" />
             </div>
@@ -30,8 +30,8 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="contact-container2">
-          <div className="row1">
+        <div className="info-links-container">
+          <div className="row">
             <Link
               target="_blank"
               to="https://www.linkedin.com/in/david-lauko-602649269/"

@@ -83,6 +83,7 @@ const CircularMenu = ({ pages }) => {
   //     document.body.classList.remove('blur-background');
   //   }
   // }, []);
+  
 
   return (
     <>

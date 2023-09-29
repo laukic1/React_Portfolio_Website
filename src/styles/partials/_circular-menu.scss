@@ -113,7 +113,8 @@
 @media (max-width: 380px) {
     .circular-menu {
         height: 60px;
-        position:relative;
+        position: fixed;
+        bottom:0;
         width: 60px;
         opacity: 1; /* Fade in */
         transition: transform 0.5s ease-in-out;
@@ -124,7 +125,7 @@
     .move-menu-bottom {
         width: 60px;
         height: 60px;
-        transform: translateY(350%);
+        transform: translateY(400%);
       }
     
     .menu-button,
@@ -172,18 +173,19 @@
 @media (min-width: 390px) and (max-width: 768px) {
     .circular-menu {
         height: 80px;
-        position:relative;
+        
         width: 80px;
         opacity: 1; /* Fade in */
         transition: transform 0.5s ease-in-out;
         transform: translateY(0); /* Move to the visible position */
-    
+        position: fixed;
+        bottom:0;
     }
     
     .move-menu-bottom {
         width: 80px;
         height: 80px;
-        transform: translateY(350%);
+        transform: translateY(400%);
       }
     
     .menu-button,
@@ -234,7 +236,8 @@
 @media (min-width: 1024px) and (max-width: 1440px) {
     .circular-menu {
         height: 80px;
-        position:relative;
+        position: fixed;
+        bottom:0;
         width: 80px;
         opacity: 1; /* Fade in */
         transition: transform 0.5s ease-in-out;
@@ -245,7 +248,7 @@
     .move-menu-bottom {
         width: 80px;
         height: 80px;
-        transform: translateY(300%);
+        transform: translateY(250%);
       }
     
     .menu-button,
@@ -290,3 +293,79 @@
         }
     }
 }
+
+@media (min-width: 653px) and (max-width: 654px) {
+    .circular-menu {
+        height: 60px;
+        position: fixed;
+        bottom:0;
+        width: 60px;
+        opacity: 1; /* Fade in */
+        transition: transform 0.5s ease-in-out;
+        transform: translateY(-80%); /* Move to the visible position */
+    
+        .x-icon {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.40em;
+            
+            
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+    
+    .move-menu-bottom {
+        width: 60px;
+        height: 60px;
+        transform: translateY(70%);
+      }
+    }
+
+    @media (min-width: 654px) and (max-width: 920px) {
+        .circular-menu {
+            height: 80px;
+            position: fixed;
+            bottom:0;
+            width: 80px;
+            opacity: 1; /* Fade in */
+            transition: transform 0.5s ease-in-out;
+            transform: translateY(-45%); /* Move to the visible position */
+        
+            .x-icon {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1.9em;
+                
+                
+                transition: transform 0.5s ease-in-out;
+            }
+        }
+        
+        .move-menu-bottom {
+            width: 80px;
+            height: 80px;
+            transform: translateY(120%);
+          }
+        }
+    
+
+    @media (min-width: 540px) and (max-width: 540px) {
+        .circular-menu {
+            height: 80px;
+            position: fixed;
+            bottom:0;
+            width: 80px;
+            opacity: 1; /* Fade in */
+            transition: transform 0.5s ease-in-out;
+            transform: translateY(-45%); /* Move to the visible position */
+        
+        }
+        
+        .move-menu-bottom {
+            width: 80px;
+            height: 80px;
+            transform: translateY(250%);
+          }
+        }
