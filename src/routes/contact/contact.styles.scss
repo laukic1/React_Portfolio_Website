@@ -330,7 +330,7 @@ h2 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 653px) {
 
   .contact-container {
     display: flex;
@@ -501,4 +501,164 @@ h2 {
   }
 
 
+}
+
+@media (min-width: 653px) and (max-width:740px) {
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    transition: 1s ease-in-out;
+    height: auto;
+    width: 100%;
+
+    h2 {
+
+      font-weight: 700;
+      font-size: 32px;
+      transform: translateY(180%);
+      border-bottom: 5px solid white;
+      text-shadow: 0 0 3px black;
+    }
+
+    .content-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      
+      
+      flex-direction: row;
+      
+      
+
+    }
+
+    .contact-container1 {
+      display: flex;
+      align-items: center;
+      
+      margin-top: 2em;
+      flex-direction: column;
+      font-size: 16px;
+      width: 50%;
+      max-width: 100%;
+
+
+
+
+
+      .row1 {
+        display: flex;
+
+        font-size: 16px;
+
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .2);
+        background-color: rgba(255, 255, 255, 0.1);
+
+
+        border: 1px solid rgb(186, 186, 186);
+        border-radius: 5px 20px 5px 20px;
+
+      }
+    }
+
+    .phone-container {
+      max-width: 100%;
+
+
+      .phone-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+
+          transform: translateY(-10%);
+          border-bottom: 2px inset rgba(240, 240, 240, 0.5);
+        }
+      }
+    }
+
+    .email-container {
+      max-width: 100%;
+
+      .email-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+
+          transform: translateY(-10%);
+          border-bottom: 2px inset rgba(240, 240, 240, 0.5);
+        }
+      }
+    }
+
+    .contact-container2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 20px;
+      max-width: 30%;
+      
+      border-radius: 5px;
+      
+
+      .row1 {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2em;
+        align-items: center;
+        width: 60%;
+        
+
+        .linked-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.3s ease-in-out;
+
+
+          &:hover {
+            transform: translateY(-10%);
+            border-bottom: 2px inset rgba(240, 240, 240, 0.5);
+          }
+        }
+
+        .git-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.3s ease-in-out;
+
+
+          &:hover {
+
+            transform: translateY(-10%);
+            border-bottom: 2px inset rgba(240, 240, 240, 0.5);
+          }
+        }
+        
+      }
+    }
+  }
 }

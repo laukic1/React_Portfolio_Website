@@ -206,7 +206,7 @@
         box-shadow: 0 0 20px rgb(255, 255, 255);
         transition: transform 300ms ease-in-out;
         animation: shadow-beep 6s infinite ease-in-out;
-        position: sticky;
+        position: fixed;
         bottom:0;
 
         &::after {

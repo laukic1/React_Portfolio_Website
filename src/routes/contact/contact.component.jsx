@@ -9,8 +9,6 @@ import PhoneCall from "../../components/phone-call/phone-call.component";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
-
- 
   return (
     <div className="contact-container">
       <h2>CONTACT</h2>
@@ -21,9 +19,7 @@ const Contact = () => {
               <PhoneIcon onClick={PhoneCall} className="phone-icon" />
             </div>
             <p>+386 40 323 077</p>
-          
           </div>
-
 
           <div className="row1">
             <div className="email-container">
@@ -32,16 +28,19 @@ const Contact = () => {
 
             <p>dlauko96@gmail.com</p>
           </div>
-
-          
-
         </div>
 
         <div className="contact-container2">
           <div className="row1">
-            
-           <Link target="_blank" to='https://www.linkedin.com/in/david-lauko-602649269/'><LinkedInIcon className="linked-icon" /></Link> 
-            <Link target="_blank" to='https://github.com/laukic1'><GitHubIcon className="git-icon" /></Link>
+            <Link
+              target="_blank"
+              to="https://www.linkedin.com/in/david-lauko-602649269/"
+            >
+              <LinkedInIcon className="linked-icon" />
+            </Link>
+            <Link target="_blank" to="https://github.com/laukic1">
+              <GitHubIcon className="git-icon" />
+            </Link>
           </div>
         </div>
       </div>
