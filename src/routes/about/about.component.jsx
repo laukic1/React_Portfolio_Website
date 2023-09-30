@@ -11,24 +11,24 @@ const About = () => {
   };
 
   return (
-    <div className="contact-container">
+    <div className="about-container">
       <h2>ABOUT ME</h2>
 
       <div className="content-body">
-        <div className="about-container3">
-          <div className="row1">
+        <div className="about-image-container">
+          <div className="row">
             <img src={ProfileImage} className="profile-img" alt="profile" />
           </div>
         </div>
-        <div className="about-container1">
-          <div className="row1">
+        <div className="about-text-container">
+          <div className="row">
             <p>
               Hey, my name is David Lauko and I'm a passionate front-end
               developer from Maribor, Slovenia.
             </p>
           </div>
 
-          <div className="row1">
+          <div className="row">
             <p>
               My dedication to excellence and commitment to deliver best
               possible product have been honed by my ability to be a creative
@@ -41,7 +41,7 @@ const About = () => {
           </button>
         </div>
 
-        <div className="about-container100">
+        <div className="info-about-container">
           <div className="row-about">
             <InfoIcon className="info-icon" />
           </div>
