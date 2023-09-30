@@ -265,7 +265,7 @@ h2 {
                     justify-content: space-between;
                     width: 60%;
                     height: auto;
-                    gap: 0em;
+                    gap: 1em;
                     margin-top: 0.5em;
                     background-color: rgba(0, 0, 0, 0.25);
                     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -275,9 +275,9 @@ h2 {
 
                     .git-icon {
                         display: flex;
-                        justify-content: center;
+                        justify-content: flex-end;
                         align-items: center;
-                        width: 50%;
+                        width: 100%;
                         height: auto;
                         transition: transform 0.3s ease-in-out;
     
@@ -291,9 +291,9 @@ h2 {
     
                     .web-icon {
                         display: flex;
-                        justify-content: center;
+                        justify-content: flex-start;
                         align-items: center;
-                        width: 50%;
+                        width: 100%;
                         height: auto;
                         transition: transform 0.3s ease-in-out;
     
