@@ -30,12 +30,12 @@ const ProjectsSlider = () => {
   );
 
   return (
-    <div className="contact-container">
+    <div className="projects-container">
       <h2>PROJECTS</h2>
 
-      <div className="content-body1">
-        <div className="about-container5">
-          <div className="row5">
+      <div className="content-body">
+        <div className="main-slider-container">
+          <div className="row">
             <Swiper
               effect={"flip"}
               pagination={true}
@@ -66,7 +66,7 @@ const ProjectsSlider = () => {
             </Swiper>
           </div>
         </div>
-        <div className="projects-container">
+        <div className="projects-info-container">
           {selectedProjectTitle && (
             <div className="row-projects">
               <h3 className="project-title">{selectedProjectTitle}</h3>

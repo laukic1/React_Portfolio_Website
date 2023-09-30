@@ -3,7 +3,7 @@ import ProjectSlider from "../../components/projects-slider/projects-slider.comp
 
 const Projects = () => {
   return (
-    <div className="contact-container">
+    <div className="projects-container">
       
 
       
