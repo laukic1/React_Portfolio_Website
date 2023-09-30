@@ -292,6 +292,7 @@
     }
   }
 }
+
 @media (max-width: 653px) {
   .contact-container {
     display: flex;
@@ -300,7 +301,7 @@
     flex-direction: column;
     transition: 1s ease-in-out;
     flex-wrap: wrap;
-    
+    width: 80%;
 
     h2 {
       font-weight: 700;
@@ -332,7 +333,7 @@
       .row {
         display: flex;
         justify-content: space-between;
-        width: 80%;
+        width: 100%;
         align-items: center;
         
         background-color: rgba(0, 0, 0, 0.6);
@@ -424,9 +425,7 @@
 
     .info-links-container {
       width: 50%;
-
-
-
+      
       .row {
         flex-direction: row;
         justify-content: center;
