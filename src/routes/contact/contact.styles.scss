@@ -237,11 +237,12 @@
         
             .row {
               display: flex;
-              justify-content: space-between;
+              
               gap: 2em;
               align-items: center;
               width: 100%;
-              flex-direction: column;
+              flex-direction: row;
+              justify-content: center;
               
         
               .linked-icon {
