@@ -38,10 +38,14 @@ const Contact = () => {
             >
               <LinkedInIcon className="linked-icon" />
             </Link>
+            </div>
+            <div className='row'>
             <Link target="_blank" to="https://github.com/laukic1">
               <GitHubIcon className="git-icon" />
             </Link>
-          </div>
+            </div>
+            
+          
         </div>
       </div>
     </div>
