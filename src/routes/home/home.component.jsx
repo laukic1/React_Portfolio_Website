@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <Routes>
       <Route element={<Homepage />} path="/">
+      
       <Route element={<TypewriterEffect />} path="/" />
       
         <Route element={<About />} path="about" />
