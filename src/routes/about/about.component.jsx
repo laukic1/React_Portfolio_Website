@@ -23,8 +23,8 @@ const About = () => {
         <div className="about-text-container">
           <div className="row">
             <p>
-              Hey, my name is David Lauko and I'm a passionate front-end
-              developer from Maribor, Slovenia.
+              Hey, my name is David Lauko and I'm a passionate React Web Developer
+               from Maribor, Slovenia.
             </p>
           </div>
 

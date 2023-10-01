@@ -52,15 +52,13 @@ const ProjectsSlider = () => {
                 setSelectedProjectWebsite(selectedProject.website);
               }}
             >
-              {projects.map((item, index) => {
+              {projects.map((item) => {
                 return (
-                  <>
-                    <SwiperSlide key={index} className="swiper-slide">
-                      <div  className="slider-img-container">
-                        <img src={item.image} alt={item.title} />
-                      </div>
-                    </SwiperSlide>
-                  </>
+                  <SwiperSlide key={item.id} className="swiper-slide">
+                    <div className="slider-img-container">
+                      <img key={item.id} src={item.image} alt={item.title} />
+                    </div>
+                  </SwiperSlide>
                 );
               })}
             </Swiper>
@@ -76,14 +74,23 @@ const ProjectsSlider = () => {
 
           {selectedProjectTitle && (
             <div className="row-projects-icons">
-             <Link key={`${selectedProjectTitle}-web`} target="_blank" to={selectedProjectWebsite}><WebsiteIcon className="web-icon" /></Link> 
-             
-              {
-                selectedProjectGitHub && (
-                  <Link key={`${selectedProjectTitle}-git`} target="_blank" to={selectedProjectGitHub}><GitIcon className="git-icon" /></Link>
-                )
-              }
-              
+              <Link
+                key={`${selectedProjectTitle}-web`}
+                target="_blank"
+                to={selectedProjectWebsite}
+              >
+                <WebsiteIcon className="web-icon" />
+              </Link>
+
+              {selectedProjectGitHub && (
+                <Link
+                  key={`${selectedProjectTitle}-git`}
+                  target="_blank"
+                  to={selectedProjectGitHub}
+                >
+                  <GitIcon className="git-icon" />
+                </Link>
+              )}
             </div>
           )}
         </div>

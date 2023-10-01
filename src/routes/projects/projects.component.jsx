@@ -4,13 +4,7 @@ import ProjectSlider from "../../components/projects-slider/projects-slider.comp
 const Projects = () => {
   return (
     <div className="projects-container">
-      
-
-      
-        
-          <ProjectSlider />
-       
-      
+      <ProjectSlider />
     </div>
   );
 };
