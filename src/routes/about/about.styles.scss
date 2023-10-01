@@ -91,12 +91,11 @@
         border-radius: 5px;
         border: 2px solid rgb(172, 172, 172);
         transition: transform 0.1s ease-in-out;
-        cursor: none;
 
         &:hover {
             color: rgba(134, 133, 133, 0.8);
             transform: translateY(-10%);
-
+            cursor: pointer;
 
         }
     }
@@ -173,12 +172,12 @@ h2 {
             border-radius: 5px;
             border: 2px solid rgb(172, 172, 172);
             transition: transform 0.1s ease-in-out;
-            cursor: none;
+          
 
             &:hover {
                 color: rgba(134, 133, 133, 0.8);
                 transform: translateY(-10%);
-
+                cursor: pointer;
 
             }
         }
@@ -245,13 +244,12 @@ h2 {
             border-radius: 5px;
             border: 2px solid rgb(172, 172, 172);
             transition: transform 0.1s ease-in-out;
-            cursor: none;
+        
 
             &:hover {
                 color: rgba(134, 133, 133, 0.8);
                 transform: translateY(-10%);
-
-
+                cursor: pointer;
             }
         }
     }
@@ -478,12 +476,12 @@ h2 {
                 border-radius: 5px;
                 border: 2px solid rgb(172, 172, 172);
                 transition: transform 0.1s ease-in-out;
-                cursor: none;
+      
     
                 &:hover {
                     color: rgba(134, 133, 133, 0.8);
                     transform: translateY(-10%);
-    
+                    cursor: pointer;
     
                 }
             }
@@ -559,12 +557,12 @@ h2 {
                 border-radius: 5px;
                 border: 2px solid rgb(172, 172, 172);
                 transition: transform 0.1s ease-in-out;
-                cursor: none;
+          
     
                 &:hover {
                     color: rgba(134, 133, 133, 0.8);
                     transform: translateY(-10%);
-    
+                    cursor: pointer;
     
                 }
             }
@@ -642,12 +640,12 @@ h2 {
                 border-radius: 5px;
                 border: 2px solid rgb(172, 172, 172);
                 transition: transform 0.1s ease-in-out;
-                cursor: none;
+  
     
                 &:hover {
                     color: rgba(134, 133, 133, 0.8);
                     transform: translateY(-10%);
-    
+                    cursor: pointer;
     
                 }
             }

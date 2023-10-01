@@ -23,7 +23,6 @@
     left: 0;
     position: absolute;
     top: 0;
-    cursor: none;
     
 }
 
@@ -57,7 +56,7 @@
 
     &:hover {
         transform: scale(1.1);
-        
+        cursor: pointer;
          
     }
 
@@ -133,7 +132,7 @@
         left: 0;
         position: absolute;
         top: 0;
-        cursor: none;  
+        cursor: pointer;
     }
 
     .menu-button {
@@ -193,7 +192,6 @@
         left: 0;
         position: absolute;
         top: 0;
-        cursor: none;  
         height: 100%;
         width: 100%;
     }
@@ -257,8 +255,7 @@
     .menu-item {
         left: 0;
         position: absolute;
-        top: 0;
-        cursor: none;  
+        top: 0; 
     }
 
     

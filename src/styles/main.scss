@@ -4,59 +4,16 @@ html, body {
   font-family: 'Nanum Gothic Coding', cursive;
     margin: 0;
     padding: 0;
-   cursor: none;
-    
-   &:hover {
-    cursor: none;
-   }
   }
 
   * {
     font-weight: 400;
   }
 
-  *:hover {
-    cursor: none;
-  }
-  *:focus {
-    cursor: none;
-  }
-
-
   .blur-background {
     filter: blur(15px);
     transition: filter 1.3s ease-in-out;
   }
-
-
-  .cursor-dot {
-    width: 5px;
-    height: 5px;
-    background-color: rgb(0, 0, 0);
-
-  }
-
-  .cursor-outline {
-    width: 30px;
-    height: 30px;
-    border: 2px solid hsla(0%, 0%, 100%, 0.1);
-    box-shadow: 0 0 20px rgb(0, 0, 0);
-    
-  }
-
-  .cursor-dot,
-  .cursor-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 200;
-    pointer-events: none;
-    cursor: none;
-  }
-  
-
 
   .clash-container {
 display: flex;
@@ -289,25 +246,6 @@ align-items: center;
   }
 
 
-@media (max-width: 768px) {
-  body{
-    cursor: progress;
-  }
-  .cursor-dot {
-    display: none;
-
-  }
-
-  .cursor-outline {
-    display: none;
-    
-  }
-
-  .cursor-dot,
-  .cursor-outline {
-    display: none;
-  }
-}
 
 @media (min-width: 653px) and (max-width: 920px) {
   .clash-container {

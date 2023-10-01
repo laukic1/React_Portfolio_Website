@@ -20,57 +20,6 @@ const menuButtons = [
 
 const Homepage = () => {
 
-  // const cursorDot = document.querrySelector("data-cursor-dot")
-  // const cursorOutline = document.querySelector("[data-cursor-outline]");
-
-  // window.addEventListener("mousemove", function (e) {
-
-  //   const posX = e.clientX;
-  //   const posY = e.clientY;
-
-  //   cursorDot.style.left = `${posX}px`;
-  //   cursorDot.style.top = `${posY}px`;
-
-  //   cursorOutline.style.left = `${posX}px`;
-  //   cursorOutline.style.top = `${posY}px`;
-  // })
-
-  
-
-
-  const [posX, setPosX] = useState(0);
-  const [posY, setPosY] = useState(0);
-
-  useEffect(() => {
-    const cursorDot = document.querySelector("[data-cursor-dot]");
-    const cursorOutline = document.querySelector("[data-cursor-outline]");
-
-    const handleMouseMove = (e) => {
-      const newX = e.clientX;
-      const newY = e.clientY;
-      setPosX(newX);
-      setPosY(newY);
-
-      if (cursorDot) {
-        cursorDot.style.left = `${newX}px`;
-        cursorDot.style.top = `${newY}px`;
-      }
-
-      if (cursorOutline) {
-        cursorOutline.style.left = `${newX}px`;
-        cursorOutline.style.top = `${newY}px`;
-      }
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
-
-
   return (
     
       <div className="gradient-bg">
