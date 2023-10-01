@@ -40,6 +40,7 @@ const ProjectsSlider = () => {
               effect={"flip"}
               pagination={true}
               navigation={true}
+              grabCursor={true}
               modules={[EffectFlip, Pagination, Navigation]}
               className="swiper"
               onSlideChange={(swiper) => {
